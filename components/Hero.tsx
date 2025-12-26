@@ -22,9 +22,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreCatalog, onViewFeatured }) 
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl space-y-8">
-        <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold tracking-[0.4em] uppercase rounded-full mb-4 animate-fade-in">
-          Artesanía Inspirada en la Montaña
-        </div>
         <h1 className="text-6xl md:text-8xl lg:text-[10rem] leading-none text-white serif font-light">
           Calidez <br />
           <span className="italic text-green-300 font-normal">Natural</span>

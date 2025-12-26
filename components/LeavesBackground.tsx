@@ -23,10 +23,10 @@ export const LeavesBackground: React.FC = () => {
 const LeafSVG: React.FC<{ color: string; rotate: number }> = ({ color, rotate }) => (
   <svg 
     viewBox="0 0 200 200" 
-    style={{ transform: `rotate(${rotate}deg)` }}
-    className="w-full h-full fill-current text-[${color}]"
+    style={{ transform: `rotate(${rotate}deg)`, color: color }}
+    className="w-full h-full fill-current"
   >
-    <path d="M100,20 C100,20 150,60 150,110 C150,160 100,180 100,180 C100,180 50,160 50,110 C50,60 100,20 100,20" fill={color} />
+    <path d="M100,20 C100,20 150,60 150,110 C150,160 100,180 100,180 C100,180 50,160 50,110 C50,60 100,20 100,20" />
     <path d="M100,20 L100,180" stroke="#FFF" strokeWidth="2" opacity="0.3" />
   </svg>
 );

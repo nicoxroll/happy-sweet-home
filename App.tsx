@@ -1,5 +1,6 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
+import Lenis from 'lenis';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { CollectionHero } from './components/CollectionHero';
@@ -22,6 +23,21 @@ const App: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('Todos');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [orderSuccess, setOrderSuccess] = useState(false);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   const categories = ['Todos', 'Termos', 'Tazas', 'Vasos', 'Artesanal'];
 
